@@ -91,14 +91,4 @@ Your Name - kharanshuw@gmail.com
 Project Link: [https://github.com/your-username/currency-converter](https://github.com/your-username/currency-converter)
 ```
 
-### Explanation:
 
-- **Description**: Provides a brief overview of the project.
-- **Features**: Lists the key features of the application.
-- **Installation**: Step-by-step instructions to set up the project locally.
-- **Usage**: Instructions on how to run the application.
-- **Contributing**: Guidelines for contributing to the project.
-- **License**: Information about the project's license.
-- **Contact**: Contact information for the project maintainer.
-
-Feel free to adjust the content as needed. If you have any other questions or need further assistance, just let me know!
