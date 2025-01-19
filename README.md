@@ -88,7 +88,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 Your Name - kharanshuw@gmail.com
 
-Project Link: [https://github.com/your-username/currency-converter](https://github.com/your-username/currency-converter)
+Project Link: https://github.com/kharanshuw/Currency-Converter-ReactJs-Project.git
+
 ```
 
 
