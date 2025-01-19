@@ -1,3 +1,5 @@
+Here's a structured README file for your currency converter project. Feel free to customize it further to match your project's specifics.
+
 ```markdown
 # Currency Converter
 
@@ -86,7 +88,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 Your Name - kharanshuw@gmail.com
 
-Project Link: https://github.com/kharanshuw/Currency-Converter-ReactJs-Project.git
+Project Link: [https://github.com/your-username/currency-converter](https://github.com/your-username/currency-converter)
 ```
 
 ### Explanation:
