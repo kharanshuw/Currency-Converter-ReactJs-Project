@@ -1,5 +1,3 @@
-Here's a structured README file for your currency converter project. Feel free to customize it further to match your project's specifics.
-
 ```markdown
 # Currency Converter
 
