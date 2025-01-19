@@ -30,7 +30,7 @@ A simple and efficient currency converter application built using React and Tail
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/your-username/currency-converter.git
+   git clone https://github.com/kharanshuw/Currency-Converter-ReactJs-Project.git
    ```
 
 2. **Navigate to the project directory:**
@@ -80,9 +80,6 @@ Contributions are welcome! Please follow these steps to contribute:
 
 6. Open a pull request.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
