@@ -6,19 +6,31 @@ import { InputBox } from "./component/InputBox";
 
 function App() {
 
+  //fromcountry veriable to store country name in which we want to convert base contry currency
   let [fromCountry, setFromCountry] = useState("USD");
+
+  //toCountry veriable to store country name for which we want to convert
   let [toCountry, setToCountry] = useState("INR");
 
+  //amount veriable to store amount
   let [amount, setAmount] = useState(1);
 
+
+  //convertedCurrency veriable to store converted currency from api 
   let [convertedCurrency, setConvertedCurrency] = useState(1);
 
+
+  //convertedAmount veriable to store converted amount after calculation
+  //convertedAmount = amount * convertedCurrency
   let [convertedAmount, setConvertedAmount] = useState(0);
 
+
+  //options veriable is used to store list of all country name
   let [options, setOptions] = useState([]);
 
 
 
+  //getConvertedCurrency function is used to get converted currency from api
   let getConvertedCurrency = useCallback(
     () => {
       getCurrency(fromCountry, toCountry).then(
@@ -35,12 +47,15 @@ function App() {
   )
 
 
+  //useEffect is used to call getConvertedCurrency function
+  //this function will get executed when application starts as well as when fromCountry or toCountry changes
   useEffect(() => {
     getConvertedCurrency();
   }, [getConvertedCurrency])
 
 
 
+  //getCurrencyListfromApi function is used to get country name list from api
   let getCurrencyListfromApi = useCallback(
     () => {
       getCurrencyList().then(
@@ -57,18 +72,27 @@ function App() {
     }, []
   )
 
+  //useEffect is used to call getCurrencyListfromApi function 
   useEffect(() => {
     getCurrencyListfromApi();
   }, [getCurrencyListfromApi])
 
 
 
+  //convert is a function that is used to set convertedAmount state
+  //It takes no argument and returns no value
+  //It is used to set convertedAmount state with the value of amount * convertedCurrency
   let convert = () => {
     setConvertedAmount(amount * convertedCurrency);
   }
 
 
 
+  /**
+   * swap is a function that is used to swap the values of fromCountry and toCountry states
+   * It takes no argument and returns no value
+   * It is used to swap the values of fromCountry and toCountry states
+   */
   let swap = () => {
     setFromCountry(toCountry);
     setToCountry(fromCountry);
@@ -77,6 +101,8 @@ function App() {
 
 
   return (
+
+
     <div
       className="w-full h-screen flex flex-col justify-center items-center bg-cover bg-no-repeat bg-fixed"
       style={{
@@ -91,6 +117,9 @@ function App() {
             convert();
           }}
         >
+
+
+          {/* InputBox is a component that is used to display input box for amount and base country name */}
           <div className="mb-6">
             <InputBox
               label="From"
@@ -102,6 +131,8 @@ function App() {
             />
           </div>
 
+
+          {/* Swap button is a button that is used to swap the values of fromCountry and toCountry states */}
           <div className="relative w-full my-2 flex justify-center">
             <button
               type="button"
@@ -111,6 +142,8 @@ function App() {
               Swap
             </button>
           </div>
+
+          {/* InputBox is a component that is used to display input box for converted amount and target country name */}
 
           <div className="mb-6">
             <InputBox
@@ -122,6 +155,8 @@ function App() {
               amountDisable
             />
           </div>
+
+          {/* Convert button is a button that is used to convert the amount from fromCountry to toCountry */}
           <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">
             Convert {fromCountry.toUpperCase()} to {toCountry.toUpperCase()}
           </button>
